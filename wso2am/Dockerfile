@@ -46,6 +46,9 @@ RUN unzip /wso2am/wso2am.zip -d /wso2am/
 RUN rm /wso2am/wso2am-?
 RUN rm /wso2am/wso2am.zip
 
+RUN mv /wso2am/wso2am-3.0.0/repository /wso2am/wso2am-3.0.0/repository.bak
+RUN mkdir -p /wso2am/wso2am-3.0.0/repository
+
 RUN echo alias ll='ls -l --color=auto' >> /etc/profile
 
 RUN touch /.bash_history
